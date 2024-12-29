@@ -5,23 +5,33 @@
     <link href="./02-signup.css" rel="stylesheet">
 </head>
 <body>
-    <h2>회원가입</h2>
-    <input type="text" placeholder="이메일을 입력해주세요"><br><br>
-    <input type="text" placeholder="이름을 입력해주세요"><br><br>
-    <input class="pw" type="password" placeholder="비밀번호를 입력해주세요" ><br><br>
-    <input class="pw" type="password" placeholder="비밀번호를 다시 입력해주세요"><br><br>
-    <select>
-        <option disabled="true" selected="true">지역을 선택하세요</option>
-        <option>서울</option>
-        <option>경기</option>
-        <option>인천</option>
-    </select>
-    <br><br>
-    <input type="radio" name="gender">여성
-    <input type="radio" name="gender">남성
-    <br><br>
-    <input type="checkbox">이용약관 개인정보 수집 및 동의
-    <hr>
-    <button>가입하기</button>
+    <div class="main">
+        <div class="form">
+        <h2 class="mt">회원 가입을 위해<br>정보를 입력해주세요</h2>
+        <h5 class="st">* 이메일</h5>
+        <input class="under-input" type="text" ><br><br>
+        <h5 class="st">* 이름</h5>
+        <input class="under-input" type="text" ><br><br>
+        <h5 class="st">* 비밀번호</h5>
+        <input class="under-input" type="password" ><br><br>
+        <h5 class="st">* 비밀번호 확인</h5>
+        <input class="under-input" type="password" ><br><br>
+        </div>
+        <!-- <select>
+            <option disabled="true" selected="true">지역을 선택하세요</option>
+            <option>서울</option>
+            <option>경기</option>
+            <option>인천</option>
+        </select> -->
+        <br><br>
+        <div class="gender-group">
+        <input class="gnnder" type="radio" name="gender">여성
+        <input class="gnnder" type="radio" name="gender">남성
+        </div>
+        <br><br>
+        <input class="chk" type="checkbox">이용약관 개인정보 수집 및 이용, 마케팅 활용에 모두 동의<br><br>
+        <!-- <hr class="line"><br> --><br>
+        <button class="button">가입하기</button>
+    </div>
 </body>
 </html>
