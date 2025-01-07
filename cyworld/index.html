@@ -4,6 +4,7 @@
     <title>누구의 미니홈피 :: 사이좋은 사람들, 싸이월드</title>
     <link href="./styles/index.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/286221b6b8.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 </head>
 <body>
     <div class="background">
@@ -61,9 +62,16 @@
                         </div>
                     </div>
                     <div class="wrapper__right__body">
-                        <iframe src="./jukebox.html"></iframe>
+                        <iframe id="contentFrame" src="./home.html"></iframe>
                     </div>
                 </div>
+                <!-- 여기! -->
+                 <div class="navigation">
+                    <div class="navigation__item" id="menuHome" onclick="menuHome()">홈</div>
+                    <div class="navigation__item" id="menuJukebox" onclick="menuJukebox()">쥬크박스</div>
+                    <div class="navigation__item" id="menuGame" onclick="menuGame()">게임</div>
+
+                 </div>
             </div>
         </div>
     </div>
