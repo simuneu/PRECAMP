@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <title>Document</title>
+    <script src="./final.js/"> </script>
+    <link href="./final.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <h3>코드캠프 회원가입</h3>
+            <input type="text" id="email" class="input" placeholder="이메일을 입력해주세요"><br>
+            <div class="error" id="error_email"></div>
+            <input type="text" id="name" class="input" placeholder="이름을 입력해주세요"><br>
+            <div class="error" id="error_name"></div>
+            <input type="password" id="pw1" class="input" placeholder="비밀번호을 입력해주세요"><br>
+            <div class="error" id="error_pw1"></div>
+            <input type="password" id="pw2" class="input" placeholder="비밀번호를 다시 입력해주세요"><br>
+            <div class="error" id="error_pw2"></div>
+        
+        <div class="wrapper__phone">
+            <input type="text" id="phoneNumber1" class="phoneNumber"> -
+            <input type="text" id="phoneNumber2" class="phoneNumber"> -
+            <input type="text" id="phoneNumber3" class="phoneNumber">
+        </div>
+
+        <div class="wrapper__token">
+            <div class="token" id="token">000000
+            <button id="token__button">인증번호 전송</button>
+            </div>
+        </div>
+        <div class="wrapper__token">
+            <div class="token__timer" id="token__timer">0:00
+                <button id="token__timer__button">인증 완료</button>
+            </div>
+        </div>
+
+        <div class="wrapper__location">
+            <select class="location" id="location">
+                <option disabled="true" selected="true">지역을 선택하세요</option>
+                <option>서울</option>
+                <option>경기</option>
+                <option>인천</option>
+            </select>
+        </div>
+        <div class="error" id="error__location"></div>
+
+        <div class="wrapper__gender">
+            <div class="gender">
+                <input type="radio">여성
+            </div>
+            <div class="gender">
+                <input type="radio">남성
+            </div>
+        </div>
+        <div class="error" id="error__gender"></div>
+        <div class="wrapper__footer">
+            <div class="divide__line"></div>
+            <button id="signup__button" class="signup__button">가입하기</button>
+        </div>
+    </div>
+</body>
+</html>
