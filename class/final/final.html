@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
    <title>Document</title>
-    <script src="./final.js/"> </script>
+    <script src="./final.js"> </script>
     <link href="./final.css" rel="stylesheet">
 </head>
 <body>
@@ -18,20 +18,18 @@
             <div class="error" id="error_pw2"></div>
         
         <div class="wrapper__phone">
-            <input type="text" id="phoneNumber1" class="phoneNumber"> -
-            <input type="text" id="phoneNumber2" class="phoneNumber"> -
-            <input type="text" id="phoneNumber3" class="phoneNumber">
+            <input type="text" id="phoneNumber1" class="phoneNumber" maxlength="3" oninput="changeFocus1()"> -
+            <input type="text" id="phoneNumber2" class="phoneNumber" maxlength="4" oninput="changeFocus2()"> -
+            <input type="text" id="phoneNumber3" class="phoneNumber" maxlength="4" oninput="changeButton1()">
         </div>
 
         <div class="wrapper__token">
-            <div class="token" id="token">000000
-            <button id="token__button">인증번호 전송</button>
-            </div>
+            <span class="token" id="token">000000</span>
+            <button id="token__button" onclick="auth()">인증번호 전송</button>
         </div>
         <div class="wrapper__token">
-            <div class="token__timer" id="token__timer">0:00
-                <button id="token__timer__button">인증 완료</button>
-            </div>
+            <span class="timer" id="timer">0:00</span>
+                <button id="token__timer__button" disabled >인증 완료</button>
         </div>
 
         <div class="wrapper__location">
@@ -46,16 +44,16 @@
 
         <div class="wrapper__gender">
             <div class="gender">
-                <input type="radio">여성
+                <input type="radio" name="gender">여성
             </div>
             <div class="gender">
-                <input type="radio">남성
+                <input type="radio" name="gender">남성
             </div>
         </div>
         <div class="error" id="error__gender"></div>
         <div class="wrapper__footer">
             <div class="divide__line"></div>
-            <button id="signup__button" class="signup__button">가입하기</button>
+            <button id="signup__button" class="signup__button" disabled>가입하기</button>
         </div>
     </div>
 </body>
