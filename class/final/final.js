@@ -35,18 +35,27 @@ let auth=()=>{
     document.getElementById("token").innerText = token
 
     if(isStarted) return
-    time =120
+    isStarted =true
+    time =5
+
+    document.getElementById("token__timer__button").disabled = true
 
     timer = setInterval(() =>{
-        let min = Math.floor(time/60)
-        let sec = String(time%60).padStart(2,"0")
-        document.getElementById("timer").innerText = min+":"+sec
-        time= time-1
+        if(time > 0) {
+            let min = Math.floor(time/60)
+            let sec = String(time%60).padStart(2,"0")
+            document.getElementById("timer").innerText = min+":"+sec
+            document.getElementById("token__timer__button").disabled=false
+            document.getElementById("token__timer__button").style.cursor="pointer"
+            time= time-1
+        }else{
+            clearInterval(timer)
+            document.getElementById("timer").innerText = "0:00"
+            document.getElementById("token__timer__button").disabled=true
+            document.getElementById("token__timer__button").style.cursor="default"
+            isStarted = false
 
-    if(timer <= 0) {
-        clearInterval(timer)
-        document.getElementById("token__timer__button").disabled=false
-    }
-},1000)
+        }
+    },1000)
 
 }
