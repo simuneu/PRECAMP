@@ -59,3 +59,16 @@ let auth=()=>{
     },1000)
 
 }
+
+let authChk=()=>{
+    if(isStarted) {
+        alert("인증이 완료되었습니다.")
+        clearInterval(timer)
+        isStarted=false
+        time=0
+        document.getElementById("timer").innerText ="0:00"
+        document.getElementById("token__timer__button").disabled = true
+    }else{
+        alert("인증시간이 초과되었습니다.")
+    }
+}
